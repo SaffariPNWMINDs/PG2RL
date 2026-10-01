@@ -1,0 +1,40 @@
+# Hyperparameters used for the experiments reported in the paper
+# (Tables 2 and 4)
+
+agent:
+  algorithm: TD3
+  actor_learning_rate: 0.001
+  critic_learning_rate: 0.001
+  discount_factor: 0.99
+  replay_buffer_size: 100000
+  mini_batch_size: 64
+  policy_update_delay: 2          # critic updates
+  exploration_noise_std: 0.2
+  target_noise_std: 0.2
+  target_noise_clip: 0.5
+  soft_target_update_tau: 0.005
+  l2_regularization: 1.0e-6
+  optimizer: Adam
+
+encoder:                           # Graph Mamba module
+  embedding_dimension: 128
+  num_layers: 2
+  chebyshev_order: 3
+  hidden_activation: relu
+  gating_activation: sigmoid
+  normalization: layernorm
+
+networks:
+  actor_hidden_dimensions: [256, 256, 128]
+  critic_hidden_dimensions: [256, 256, 128]
+  actor_output_activation: tanh
+
+reward:
+  voltage_penalty_weight: 1.0      # lambda_1
+  line_flow_penalty_weight: 1.0    # lambda_2
+  voltage_limits: [0.9, 1.1]       # per unit
+  line_loading_limit: 100          # percent
+
+training:
+  episodes: 100
+  seeds: 5
