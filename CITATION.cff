@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying paper."
+title: "PGSRL: Physics-Guided Graph Safe Reinforcement Learning for AC Optimal Power Flow"
+authors:
+  - family-names: Singh
+    given-names: Yash Pratap
+    affiliation: Purdue University Northwest
+  - family-names: Saffari
+    given-names: Mohsen
+    affiliation: Purdue University Northwest
+    email: msaffari@pnw.edu
+  - family-names: Asrari
+    given-names: Arash
+    affiliation: Purdue University Northwest
+license: MIT
+repository-code: "https://github.com/SaffariPNWMINDs/PG2RL"
+preferred-citation:
+  type: article
+  title: "Physics-Guided Graph Safe Reinforcement Learning for High-Fidelity and Scalable Alternating Current Optimal Power Flow"
+  authors:
+    - family-names: Singh
+      given-names: Yash Pratap
+    - family-names: Saffari
+      given-names: Mohsen
+    - family-names: Asrari
+      given-names: Arash
+  journal: Processes
+  publisher:
+    name: MDPI
+  year: 2026
